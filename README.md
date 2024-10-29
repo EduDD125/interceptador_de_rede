@@ -17,25 +17,26 @@ Este projeto utiliza o `mitmproxy` para interceptar e filtrar o tráfego de inte
 
 ## Biblioteca python-dotenv para carregar variáveis do arquivo .env:
 
-bash
-
+    ```bash
     pip install python-dotenv
-
+    ```
 --- 
 
 ## Configuração
 
 ### 1. Clonar o repositório:
 
-    bash
-        git clone https://github.com/seuusuario/internet_interceptor.git
-        cd internet_interceptor
+    ```bash
+    git clone https://github.com/seuusuario/internet_interceptor.git
+    cd internet_interceptor
+    ```
 
 ### 2. Criar o arquivo .env:
 Crie um arquivo .env na raiz do projeto e defina a variável SUBSTRINGS_TO_BLOCK com as palavras-chave que devem ser bloqueadas, conforme o exemplo abaixo:
 
-env
+    ```env
     SUBSTRINGS_TO_BLOCK='[ "tiktok", "kwai", "shorts", "facebook"]'
+    ```
 
 ## 3. Configurar um servidor proxy
 Configure um servidor proxy na máquina em que o interceptador atuará. 
@@ -45,9 +46,9 @@ Configure um servidor proxy na máquina em que o interceptador atuará.
 
 Utilize o script .bat para iniciar o mitmproxy com o filtro configurado:
 
-bash
+    ```bash
     start_interceptor.bat
-
+    ```
 --- 
 
 
@@ -61,12 +62,13 @@ Quando uma correspondência é encontrada, o mitmproxy responde com um código H
 
 ## Estrutura do Projeto
 
-plaintext
+    ```plaintext
     internet_interceptor/
     ├── interceptor.py          # Script Python com lógica de filtragem de conteúdo
     ├── .env                    # Configura as substrings bloqueadas (não incluído no controle de versão)
     ├── start_interceptor.bat   # Script para iniciar o mitmproxy com variáveis de ambiente
     └── README.md               # Documentação do projeto
+    ```
 
 --- 
 
