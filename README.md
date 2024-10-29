@@ -12,8 +12,9 @@ Este projeto utiliza o `mitmproxy` para interceptar e filtrar o tráfego de inte
 
 - [Python 3.6+](https://www.python.org/downloads/)
 - [mitmproxy](https://mitmproxy.org/): pode ser instalado via pip:
-  ```bash
-  pip install mitmproxy
+    ```bash
+    pip install mitmprox
+    ```
 
 ## Biblioteca python-dotenv para carregar variáveis do arquivo .env:
 
