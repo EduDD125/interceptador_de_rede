@@ -28,16 +28,14 @@ bash
 ### 1. Clonar o repositório:
 
     bash
-
-git clone https://github.com/seuusuario/internet_interceptor.git
-cd internet_interceptor
+        git clone https://github.com/seuusuario/internet_interceptor.git
+        cd internet_interceptor
 
 ### 2. Criar o arquivo .env:
 Crie um arquivo .env na raiz do projeto e defina a variável SUBSTRINGS_TO_BLOCK com as palavras-chave que devem ser bloqueadas, conforme o exemplo abaixo:
 
 env
-
-SUBSTRINGS_TO_BLOCK='[ "tiktok", "kwai", "shorts", "facebook"]'
+    SUBSTRINGS_TO_BLOCK='[ "tiktok", "kwai", "shorts", "facebook"]'
 
 ## 3. Configurar um servidor proxy
 Configure um servidor proxy na máquina em que o interceptador atuará. 
@@ -48,7 +46,6 @@ Configure um servidor proxy na máquina em que o interceptador atuará.
 Utilize o script .bat para iniciar o mitmproxy com o filtro configurado:
 
 bash
-
     start_interceptor.bat
 
 --- 
@@ -56,8 +53,8 @@ bash
 
 ## Como Funciona
 
-    O interceptor.py monitora o tráfego e verifica se as URLs ou cabeçalhos "Referer" contêm alguma das substrings bloqueadas.
-    Quando uma correspondência é encontrada, o mitmproxy responde com um código HTTP 403 e uma mensagem de bloqueio personalizada.
+O interceptor.py monitora o tráfego e verifica se as URLs ou cabeçalhos "Referer" contêm alguma das substrings bloqueadas.
+Quando uma correspondência é encontrada, o mitmproxy responde com um código HTTP 403 e uma mensagem de bloqueio personalizada.
 
 --- 
 
@@ -65,12 +62,11 @@ bash
 ## Estrutura do Projeto
 
 plaintext
-
-internet_interceptor/
-├── interceptor.py          # Script Python com lógica de filtragem de conteúdo
-├── .env                    # Configura as substrings bloqueadas (não incluído no controle de versão)
-├── start_interceptor.bat   # Script para iniciar o mitmproxy com variáveis de ambiente
-└── README.md               # Documentação do projeto
+    internet_interceptor/
+    ├── interceptor.py          # Script Python com lógica de filtragem de conteúdo
+    ├── .env                    # Configura as substrings bloqueadas (não incluído no controle de versão)
+    ├── start_interceptor.bat   # Script para iniciar o mitmproxy com variáveis de ambiente
+    └── README.md               # Documentação do projeto
 
 --- 
 
@@ -86,14 +82,12 @@ Contribuição
 
 ## Contribuições são bem-vindas! Para contribuir:
 
-    Faça um fork do repositório.
-    Crie uma nova branch para suas modificações (git checkout -b minha-modificacao).
-    Commit suas alterações (git commit -m 'Minha modificação').
-    Faça o push para a branch (git push origin minha-modificacao).
-    Abra um Pull Request.
+Faça um fork do repositório.
+Crie uma nova branch para suas modificações (git checkout -b minha-modificacao).
+Commit suas alterações (git commit -m 'Minha modificação').
+Faça o push para a branch (git push origin minha-modificacao).
+Abra um Pull Request.
 
 ## Licença
 
 Este projeto está licenciado sob a MIT License.
-
-javascript
